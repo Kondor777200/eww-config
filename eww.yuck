@@ -121,8 +121,8 @@
 
 ;; Powermenu Widgets ;;
 (defwidget power []
-	(eventbox	:onhover "${eww} update power=true"	
-				:onhoverlost "${eww} update power=false" 
+	(eventbox	:onhover "eww update power=true"	
+				:onhoverlost "eww update power=false" 
 	(box		:orientation "v"					
 				:space-evenly "false" 	 
 				:vexpand "false" 	
@@ -133,21 +133,17 @@
 	(box		:orientation "v"					
 				:space-evenly "false"
 
-	(button   	:class "button-bspres"  			
-				:tooltip "BSPWM Restart" 
-				:onclick "bspc wm -r" "" )
-
-  	(button		:class "button-reb"					
-	  			:tooltip "Reboot"		 
+  	(button		:class "button-reb"			
+	  			:tooltip "Reboot"	 
 				:onclick "reboot"	"")
 
 	(button		:class "button-quit" 				
 				:tooltip "Logout" 		 
-				:onclick "killall bspwm" "󰗽")
+				:onclick "killall hyprland" "󰗽")
 
 	(button		:class "button-lock" 				
 				:tooltip "Lock Screen"	 
-				:onclick "betterlockscreen -l"	"")))
+				:onclick "hyprlock"	"")))
 
 	(button		:class "button-off"					
 				:tooltip "Shutdown"		 
