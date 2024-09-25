@@ -38,8 +38,8 @@
 
 ;; Brightness Widgets ;;
 (defwidget bright []
-  (eventbox :onhover "${eww} update bright=true"   
-  			:onhoverlost "${eww} update bright=false"
+  (eventbox :onhover "eww update bright=true"   
+  			:onhoverlost "eww update bright=false"
   			(box    :orientation "v"  
 			  		:space-evenly "false"  
 					:spacing 2
@@ -61,21 +61,21 @@
 
 ;; Volume Widgets ;;
 (defwidget volum []
-	(eventbox :onhover "${eww} update volum=true" 		
-			  :onhoverlost "${eww} update volum=false"
-	(box      :orientation "v" 	  
-			  :space-evenly "false" 
+	(eventbox :onhover "eww update volum=true"
+			  :onhoverlost "eww update volum=false"
+	(box      :orientation "v"
+			  :space-evenly "false"
 			  :spacing "2"
 	(revealer :transition "slideup" 
-			  :reveal volum         
+			  :reveal volum 
 			  :duration "550ms"
-	(scale    :class "volbar" 	  
-			  :value current-volume 
-			  :orientation "v"      
-			  :flipped true 
-			  :tooltip "Volume: ${current-volume}%" 
-			  :max 101 
-			  :min 0 
+	(scale    :class "volbar"
+			  :value current-volume
+			  :orientation "v" 
+			  :flipped true
+			  :tooltip "Volume: ${current-volume}%"
+			  :max 101
+			  :min 0
 			  :onchange "amixer -D pulse sset Master {}%" ))
 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
 (defpoll current-volume :interval "1s" "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F':' '{printf($2*100)}'")
