@@ -76,7 +76,7 @@
 			  :tooltip "Volume: ${current-volume}%"
 			  :max 101
 			  :min 0
-			  :onchange "amixer -D pulse sset Master {}%" ))
+			  :onchange "wpctl set-volume 50 {}%" ))
 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
 (defpoll current-volume :interval "1s" "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F':' '{printf($2*100)}'")
 (defvar volum false)
