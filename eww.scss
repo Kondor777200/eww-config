@@ -1,6 +1,16 @@
 /* Created   by https://github.com/rxyhn 
    Designed  by https://github.com/rxyhn
-   Maintaned by https://github.com/rxyhn
+   Maintaned by https://github.com/rxyh  
+   --bg-color: #18181a;
+  --main-color: #e4609b;
+  --caret-color: #e4609b;
+  --sub-color: #47bac0;
+  --sub-alt-color: #0f0f10;
+  --text-color: #fff;
+  --error-color: #fff591;
+  --error-extra-color: #b6af68;
+  --colorful-error-color: #fff591;
+  --colorful-error-extra-color: #b6af68;
 */
 
 // Global
@@ -9,17 +19,17 @@
 }
 
 // Variable Color's
-$background: #1A1B26;
+$background: #0f0f10;
 $foreground: #A9B1D6;
 
-$black: #24283B;
+$black: #18181a;
 $gray: #565F89;
-$red: #F7768E;
+$red: #00310d;
 $green: #73DACA;
-$yellow: #E0AF68;
-$blue: #7AA2F7;
-$magenta: #BB9AF7;
-$cyan: #7DCFFF;
+$yellow: #fff591;
+$blue: #47bac0;
+$magenta: #e4609b;
+$cyan: #c07dff;
 $white: $foreground;
 
 // EWW BAR
@@ -95,7 +105,7 @@ scale trough {
   font-weight: bold;
   font-size: 1.2em;
   background-color: $black;
-  color: $white;
+  color: $magenta;
   border-radius: 5px;
   padding: .7rem 0 .5rem 0;
   margin: .5rem 0 .5rem 0;
@@ -156,7 +166,7 @@ color: $background;
 }
 .button-off{
   margin-bottom: .5rem;
-  color: $red;
+  color: $magenta;
 }
 .button-bspres{
   color: $green;
