@@ -143,7 +143,7 @@
 
 	(button		:class "button-lock" 				
 				:tooltip "Lock Screen"	 
-				:onclick "alacritty -e hyprlock" "")))
+				:onclick "hyprlock" "")))
 
 	(button		:class "button-off"					
 				:tooltip "Shutdown"		 
@@ -191,7 +191,7 @@
   :exclusive true
   :monitor 0
   :windowtype "dock"
-  :stacking "bg"
+  :stacking "bottom"
     :focusable false
 	:geometry (geometry
     :x "5" 
